@@ -1,0 +1,17 @@
+{% extends "base.html" %}<!DOCTYPE html>
+{% block head %}
+	<link rel="stylesheet" href="{{ url_for('static', filename='css/about.css') }}">
+	<title>About Benjamin</title>
+{% endblock %}
+
+{% block body %}
+  <div class="page-header" id="header">                                                                                                                           
+    <h1 id="header-text"><strong>About Benjamin</strong></h1>
+  </div>
+  <br/>
+  <div id="text-body">
+    <p>Hello! welcome to my website.<br/>My name is Benjamin Ashbaugh, and I am a twelve-year-old boy      who loves
+      math, science, electronics, and programming. I live in Lafayette, Colorado with my mom, dad, and  sister,
+      and my cat Lulu and dog Coco.</p>
+  </div>
+{% endblock %}

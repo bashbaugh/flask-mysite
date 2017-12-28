@@ -20,7 +20,7 @@ class DevelopmentConfig(Config):
     MAIL_USERNAME = os.environ.get('MAIL_USERNAME')
     MAIL_PASSWORD = os.environ.get('MAIL_PASSWORD')
     SQLALCHEMY_DATABASE_URI =\
-        'postgresql://postgres:potatoe05@localhost:5000/postgres'
+        'sqlite:///' + os.path.join(basedir, 'db.sqlite')
 
 config = {
     'development' : DevelopmentConfig,

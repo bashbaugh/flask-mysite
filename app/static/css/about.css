@@ -1,0 +1,16 @@
+#text-body {
+  line-height: 2;
+  margin-left: 10%;
+  margin-right: 10%;
+  font-size: 1.3em; 
+}
+#header {
+  color: blue;
+  margin-left: 30px;
+  margin-right: 30px;
+  font-family: 'Nova Square', cursive;
+}
+#logo {
+  color: #00b359;
+  font-size: 1.5em;
+}

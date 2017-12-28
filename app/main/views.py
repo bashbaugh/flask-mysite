@@ -9,3 +9,7 @@ from .. import db
 def index():
     return render_template('index.html') 
     # return "HELLO"
+    
+@main.route('/about-me')
+def about():
+	return render_template('about.html')
