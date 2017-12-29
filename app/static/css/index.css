@@ -8,27 +8,26 @@
     /*background-size: contain;*/
     /*margin: 0 auto;*/
 }
-#hpic {
-  display: block;
-  /*position: absolute;*/
-  height: 100%;
-  margin: 0 auto;
+#home-pic {
+    border: none;
+    max-height: 100%;
+    height: auto;
+    max-width: 100%;
+    width: auto;
+/*    padding-bottom: 50px;*/
 }
 
-a {
-  position: fixed;
-  background-color: transparent;
+#footer {
+    position: fixed;
+    background-color: black;
+    bottom: 0px;
+    width: 100%;
 }
-/*clickable areas:*/
-#button-blog {
-  top: 40%;
-  left: 0%;
-  height: 42%;
-  width: 27%;
+
+#footer-menu {
+    width:100%;
 }
-#button-about {
-  top: 0%;
-  left: 35%;
-  height: 25%;
-  width: 30%;
+th {
+    text-align: center;
+    padding: 20px;
 }

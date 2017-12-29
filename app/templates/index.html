@@ -6,11 +6,33 @@
   <title>Benjamin Ashbaugh</title>
 </head>
 <body>
-<div id="homepic">
-<image id="hpic" src="{{ url_for('static', filename='images/indexbg.jpeg')}}" alt="sorry, the picture won't load for some reason..."/>
+<!--homescreen picture -->
+<div>
+	<img id="home-pic"src="{{ url_for('static', filename='images/indexbg.jpeg') }}" width="2957" height="2177" usemap="#home-pic" alt="">
+	<map name="home-pic">
+    	<area target="" alt="My Blog" title="My Blog" href="/blog" coords="807,1641,-2,968" shape="rect">
+    	<area target="" alt="About Benjamin" title="About Benjamin" href="/about-me" coords="1009,300,1971,751" shape="rect">
+</map>
 </div>
-<p class="green-text"><strong>Hello. This is my website. if this homepage is not working <a href="statichome">go here</a>.</strong></p>
-<a id="button-blog" href="blog">
-<a id="button-about" href="about-me">
+<!--footer at bottom of page -->
+<div id="footer">
+	<table id="footer-menu">
+		<tr>
+			<th><a href="/about-me">About Me</a></th>
+			<th><a href="/blog">My Blog</a></th>
+			<th><a href="/account/login">Login</a></th>
+			<th>
+		</tr>
+	</table>
+</div>
+<!-- The following code is to make the imagemap responsive -->
+<script src="{{ url_for('static', filename='js/rwdImgMap.js') }}"></script>
+<script>
+$(document).ready(function(e) {
+	$('img[usemap]').rwdImageMaps();
+	
+});
+</script>
 </body>
 </html>
+
