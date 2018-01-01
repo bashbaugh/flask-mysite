@@ -1,0 +1,21 @@
+{% extends "base.html" %}
+{% import  "bootstrap/wtf.html" as wtf%}
+
+{% block body %}
+<div class="container">
+<div class="page-header">
+    <h1>Login</h1>
+    
+</div>
+{% for message in get_flashed_messages() %}
+{% if message == 'loginerror' %}
+    <div class="alert alert-danger">
+    Invalid username or password, please try again.
+    </div>
+{% endif %}
+{% endfor %}
+<div class="col-md-4">
+    {{ wtf.quick_form(form) }}
+</div>
+</div>
+{% endblock %}
