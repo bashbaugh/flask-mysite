@@ -1,8 +1,9 @@
 from flask import render_template, redirect, request, url_for, flash
 from . import account
-from flask_login import login_user, logout_user, login_required
+from .. import db
+from flask_login import login_user, logout_user, login_required, current_user
 from ..models import User
-from .forms import LoginForm
+from .forms import *
 
 @account.route('/login', methods=['GET', 'POST'])
 def login():
@@ -21,3 +22,12 @@ def logout():
     flash('Goodbye!')
     return redirect(url_for('main.index'))
 
+@account.route('/register', methods=['GET', 'POST'])
+def register():
+    form = RegistrationForm()
+    if form.validate_on_submit():
+        user = User(email=form.email.data, username=form.username.data, password=form.password.data)
+        db.session.add(user)
+        flash('newaccount')
+        return redirect(url_for('account.login'))
+    return render_template('account/register.html', form=form)
