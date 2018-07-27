@@ -1,3 +1,5 @@
 # my website
-The python flask backend for my website (in early development)
-hopefully I will be able to publish this soon.
+The python flask backend for my website.
+
+This is no longer in development.
+See my new website at scitronboy.github.io
